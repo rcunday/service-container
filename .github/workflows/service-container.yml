@@ -50,7 +50,7 @@ jobs:
           # default set of ruff rules with GitHub Annotations
           ruff --format=github --target-version=py37 .
       - name: Seed the database
-        run: python seed_database.py
+        run: python seeddb.py
         env:
           DATABASE_HOST: localhost
           DATABASE_NAME: ${{ env.DATABASE_NAME }}
